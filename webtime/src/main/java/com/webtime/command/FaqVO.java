@@ -1,34 +1,41 @@
 package com.webtime.command;
 
+
 public class FaqVO {
-	String name;
-	String id;
-	String pw;
-	public String getName() {
-		return name;
+	private int Fno;
+	private String Type;
+	private String Title;
+	private String Content;
+	public int getFno() {
+		return Fno;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setFno(int fno) {
+		Fno = fno;
 	}
-	public String getId() {
-		return id;
+	public String getType() {
+		return Type;
 	}
-	public void setId(String id) {
-		this.id = id;
+	public void setType(String type) {
+		Type = type;
 	}
-	public String getPw() {
-		return pw;
+	public String getTitle() {
+		return Title;
 	}
-	public void setPw(String pw) {
-		this.pw = pw;
+	public void setTitle(String title) {
+		Title = title;
 	}
-	public FaqVO(String name, String id, String pw) {
+	public String getContent() {
+		return Content;
+	}
+	public void setContent(String content) {
+		Content = content;
+	}
+	public FaqVO(int fno, String type, String title, String content) {
 		super();
-		this.name = name;
-		this.id = id;
-		this.pw = pw;
+		Fno = fno;
+		Type = type;
+		Title = title;
+		Content = content;
 	}
-	
-	
 	
 }
