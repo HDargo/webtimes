@@ -44,5 +44,8 @@ public class FaqChatVO {
 		this.recordFileLoca = recordFileLoca;
 		this.regdate = regdate;
 	}
+	public FaqChatVO() {
+		super();
+	}
 	
 }

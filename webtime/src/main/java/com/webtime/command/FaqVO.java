@@ -37,5 +37,9 @@ public class FaqVO {
 		Title = title;
 		Content = content;
 	}
+	public FaqVO() {
+		super();
+	}
+	
 	
 }
