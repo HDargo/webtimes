@@ -1,7 +1,7 @@
-package com.webtime.user.mapper;
+package com.webtime.user.service;
 
 import com.webtime.command.UserVO;
 
-public interface userMapper {
+public interface UserService {
 	public int login(UserVO vo);
 }
