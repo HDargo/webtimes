@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>부트스트랩 101 템플릿</title>
+    <title>TICKET</title>
 
     <!-- 부트스트랩 -->
     <link href="${pageContext.request.contextPath }/resources/css/bootstrap.css" rel="stylesheet">
@@ -91,10 +91,7 @@
                             <span>개 뮤지컬판매중</span>
                         </dt>
                        <dd><a href="">오리지널/내한공연</a></dd>
-                       <dd><a href="">라이센스</a></dd>
                        <dd><a href="">창작뮤지컬</a></dd>
-                       <dd><a href="">넌버벌퍼포먼스</a></dd>
-                       <dd><a href="">패키지공연</a></dd >
                        <dd><a href="">내한공연</a></dd>
                    </dl>
                </div>
@@ -124,28 +121,7 @@
                              <a href="" onclick="javascript:MuTopBannerAction.Click(5);return false;" onMouseOver="javascript:MuTopBannerAction.Change(5);MuTopBannerAction.RollStop();return false;" onMouseOut="javascript:MuTopBannerAction.RollStart();return false;"><span>레베카</span></a>
                          </li>
                      </ul>
-                   </div>
-                   <div class="banner-bottom">
-                        <dl class="red-mu">
-                            <dt><img src="../resources/img/musical/tit_musical.gif"></dt>
-                            <dd>
-                               <span><a href="">스위니토드</a></span>
-                               <span><a href="">아이다</a></span>
-                               <span><a href="">빅 피쉬</a></span>
-                               <span><a href="">여명의 눈동자</a></span>
-                               <span><a href="">오페라의 유령</a></span>
-                               <span><a href="">블루맨그룹</a></span>
-                               <span><a href="">그리스</a></span>
-                            </dd>
-                           </dl>
-                       <dl class="red-news">
-                           <dt><img src="../resources/img/musical/tit_open.gif"></dt>
-                           <dd>
-                                <span><a href="">뮤지컬 빨래 - 진주티켓 오픈안내</a></span>
-                                <span><a href="">뮤지컬 미스트 - 1차티켓 오픈안내</a></span>
-                           </dd>
-                       </dl>
-                   </div>         
+                   </div>      
                </div>
             
                 <div class="rank-musical">
@@ -159,13 +135,7 @@
                         </li>
                         <li>
                             <span><a href="">3 뮤지컬 아이다</a></span>
-                        </li>
-                        <li>
-                            <span><a href="">4 뮤지컬 오페라의 유령-월드투어 부산</a></span>
-                        </li>
-                        <li>
-                            <span><a href="">5 미스터쇼(Mr.SHOW)</a></span>
-                        </li>             
+                        </li>        
                     </ol>
                 </div>
 
@@ -179,8 +149,7 @@
                             </a>
                             <p class="info">
                                 <span class="txt1">그리스</span>
-                                <span class="txt2">디큐브아트센터</span>            
-       
+                                <span class="txt2">디큐브아트센터</span>                   
                             </p>
                         </dt>
                         <dt class="obj">
@@ -219,57 +188,7 @@
                                 <span class="txt2">두산아트센터</span>           
                             </p>
                         </dt>
-                    </dl>
-                    <p class="line">
-
-                    </p>
-                    <dl class="list">
-                        <dt class="obj">
-                            <a href="">
-                                <img src="../resources/img/musical/mu_list6.gif">
-                            </a>
-                            <p class="info">
-                                <span class="txt1">안테모사</span>
-                                <span class="txt2">대학로예술극장</span>            
-                            </p>
-                        </dt>
-                        <dt class="obj">
-                            <a href="">
-                                <img src="../resources/img/musical/mu_list7.gif">
-                            </a>
-                            <p class="info">
-                                <span class="txt1">가족뮤지컬 애니</span>
-                                <span class="txt2">세종문화회관</span>                 
-                            </p>
-                        </dt>
-                        <dt class="obj">
-                            <a href="">
-                                <img src="../resources/img/musical/mu_list8.gif">
-                            </a>
-                            <p class="info">
-                                <span class="txt1">빨래</span>
-                                <span class="txt2">동양예술극장 1관</span>                   
-                            </p>
-                        </dt>
-                        <dt class="obj">
-                            <a href="">
-                                <img src="../resources/img/musical/mu_list9.gif">
-                            </a>
-                            <p class="info">
-                                <span class="txt1">정글라이프</span>
-                                <span class="txt2">대학로 고스트씨어터</span>                  
-                            </p>
-                        </dt>
-                        <dt class="obj">
-                            <a href="">
-                                <img src="../resources/img/musical/mu_list10.gif">
-                            </a>
-                            <p class="info">
-                                <span class="txt1">6시 퇴근</span>
-                                <span class="txt2">JTN아트홀 1관</span>                  
-                            </p>
-                        </dt>
-                    </dl>
+                    </dl>                           
                 </div>
             </div>
             </div>
@@ -280,6 +199,7 @@
  <%@include file="../include/footer.jsp" %>
       <script>
           var muInterval_banner;
+          var MuTopBanners = [
             ['../resources/img/musical/b_musical1.gif', 'link0', '웃는남자'],
             ['../resources/img/musical/b_musical2.gif', 'link1', '보디가드'],
             ['../resources/img/musical/b_musical3.gif', 'link2', '스웨그에이지'],
