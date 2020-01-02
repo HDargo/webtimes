@@ -23,6 +23,7 @@ body {
 
 p {
 	margin: 0;
+    width: 100%;
 }
 
 .main, .upDiv, .middleDiv {
@@ -155,7 +156,7 @@ p {
 	height: 10%;
 	margin-bottom: 2%;
 }
-
+    
 .chat .chat-left p, .chat .chat-left .time-left {
 	padding-left: 5px;
 }
@@ -173,6 +174,16 @@ p {
 .chat .chat-right p, .chat .chat-right .time-right {
 	padding-right: 5px;
 }
+    .chat-left, .chat-right{
+        overflow: hidden;
+    }
+    
+    .chat-right p{
+        float: left;
+    }
+    .chat-right span{
+        float: right;
+    }
 
 @import
 	url('https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap')
