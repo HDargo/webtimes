@@ -7,6 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
 <title>부트스트랩 101 템플릿</title>
 
 <!-- 부트스트랩 -->
@@ -63,7 +64,8 @@
 							<span>필수</span> 정보입력
 						</h3>
 
-						<form>
+						<form action="joinForm" id="regForm" name="regForm" method="post">
+						
 						<table class="type1">
 							<caption></caption>
 							<colgroup>
@@ -74,8 +76,8 @@
 								<tr>
 									<th><span>*</span>아이디</th>
 									<td>
-										<input type="text" style="width: 360px" placeholder="띄어쓰기 없는 영문,숫자로만 6~20자"> 
-										<a href="#a" class="btn_type2">중복확인</a>
+										<input type="text" style="width: 360px" placeholder="띄어쓰기 없는 영문,숫자로만 6~20자" name="id" id="id"> 
+										<a href="#a" class="btn_type2" id="idConfirmBtn">중복확인</a>
 									</td>
 								</tr>
 								<tr>
@@ -83,7 +85,7 @@
 										<span>*</span>비밀번호
 									</th>	
 									<td>
-										<input type="password" style="width: 360px" placeholder="영문,숫자,특수문자 조합  8~12자리">
+										<input type="password" style="width: 360px" placeholder="영문,숫자,특수문자 조합  8~12자리" name="pw" id="pw">
 									</td>
 								</tr>
 								<tr>
@@ -91,7 +93,7 @@
 										<span>*</span>비밀번호 확인
 									</th>
 									<td>
-										<input type="password" style="width: 360px" placeholder="영문,숫자,특수문자 조합  8~12자리">
+										<input type="password" style="width: 360px" placeholder="영문,숫자,특수문자 조합  8~12자리" name="pwCheck" id="pwCheck">
 									</td>
 								</tr>
 								<tr>
@@ -99,7 +101,7 @@
 										<span>*</span>이름
 									</th>
 									<td>
-										<input type="text" style="width: 360px">
+										<input type="text" style="width: 360px" id="name" name="name">
 									</td>
 								</tr>
 								<tr>
@@ -549,7 +551,7 @@
 
 
 						<div class="btn_center">
-							<a href="#a" class="btn_type1">회원가입</a>
+							<a href="#a" class="btn_type1" id="joinBtn">회원가입</a>
 						</div>
 
 					</div>
@@ -576,6 +578,56 @@
 
         })
     </script>
+    
+    <script>
+    $("#idConfirmBtn").click(function(){
+    	if($("#id").val()==''|| $("#id").css("border-Color")=='rgb(255,0,0)'){
+    		alert("아이디 규칙을 확인하세요.");
+    		return false;
+    	}
+    	
+    	var id=$("#id").val();
+    	$.ajax({
+    		type:"post",
+    		url:"idConfirm",
+    		data:JSON.stringify({"id":id}),
+    		contentType:"application/json; charset=utf-8",
+    		success:function(result){
+    			if(result==0){
+    				alert("사용가능한 아이디입니다.");
+    				$("#id").attr("readonly",true);
+    				
+    			}else{
+    				alert("중복된 아이디 입니다.");
+    				$("#id").focus();
+    			}
+    		
+    		}
+    	})
+
+    })
+    </script>
+    
+    <script>
+   
+    $("#joinBtn").click(function(){    	
+    	if(!$("#id").attr("readonly")){
+    		alert("아이디 중복체크는 필수 입니다.");
+    	}else if($("#pw").val()==''){
+    		alert("비밀번호 규칙을 확인하세요");
+    	}else if($("#pwCheck").val() !=$("#pwConfirm").val()){
+    		alert("비밀번호 값이 서로 다릅니다.")
+    	}else if($("#name").val()==''){
+    		alert("이름은 필수사항입니다.");
+    	}else if(confirm("회원가입을 진행하시겠습니까?")){
+    		$("#regForm").subimt();
+    	}
+    })
+
+    </script>
+   
+    
+    
 	
 	<%@include file="../include/footer.jsp"%>
 </body>
