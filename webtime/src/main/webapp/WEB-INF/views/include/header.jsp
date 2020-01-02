@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix ="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,11 +37,21 @@
                         </div>
                         <div class="header-top-right">
                             <ul class="header-top-btn">
+                            <c:choose>
+                            	<c:when test="${sessionScope.id eq null }">
                                 <li><a href="${pageContext.request.contextPath }/users/login"><span>로그인</span></a></li>
                                 <li><a href="${pageContext.request.contextPath}/users/join_main"><span>회원가입</span></a></li>
                                 <li><a href="${pageContext.request.contextPath }/users/mybooking"><span>예매확인</span></a></li>
                                 <li><a href="${pageContext.request.contextPath }/users/mypage"><span>마이페이지</span></a></li>
                                 <li><a href="${pageContext.request.contextPath }/FAQ/faqList"><span>고객센터</span></a></li>
+                                </c:when>
+                                <c:otherwise>
+                                <li><a href="${pageContext.request.contextPath }/users/logout"><span>로그아웃</span></a></li>
+                                <li><a href="${pageContext.request.contextPath }/users/mybooking"><span>예매확인</span></a></li>
+                                <li><a href="${pageContext.request.contextPath }/users/mypage"><span>마이페이지</span></a></li>
+                                <li><a href="${pageContext.request.contextPath }/FAQ/faqList"><span>고객센터</span></a></li>
+                                </c:otherwise>
+                                </c:choose>
                             </ul>
                         </div>
                     </div>

@@ -104,6 +104,12 @@ private UserService userService;
 		
 	}
 	
+	@RequestMapping("/logout")
+	public String logout(HttpSession session) {
+		session.invalidate();
+		return "redirect:/"; //홈화면
+	}
+	
 	
 
 }
