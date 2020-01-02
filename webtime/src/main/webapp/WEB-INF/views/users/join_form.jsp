@@ -38,14 +38,12 @@
 	rel="stylesheet">
 
 <style type="text/css">
-	.btn_type2,
-	.btn_type2:hover,
-	.btn_type2:focus {
-		display:inline-block;
-		height:36px;
-		color:#fff;
-		text-decoration:none;
-	}
+.btn_type2, .btn_type2:hover, .btn_type2:focus {
+	display: inline-block;
+	height: 36px;
+	color: #fff;
+	text-decoration: none;
+}
 </style>
 </head>
 <body>
@@ -64,142 +62,116 @@
 							<span>필수</span> 정보입력
 						</h3>
 
-						<form action="joinForm" id="regForm" name="regForm" method="post">
-						
-						<table class="type1">
-							<caption></caption>
-							<colgroup>
-								<col style="width: :170px;">
-								<col>
-							</colgroup>
-							<tbody>
-								<tr>
-									<th><span>*</span>아이디</th>
-									<td>
-										<input type="text" style="width: 360px" placeholder="띄어쓰기 없는 영문,숫자로만 6~20자" name="id" id="id"> 
-										<a href="#a" class="btn_type2" id="idConfirmBtn">중복확인</a>
-									</td>
-								</tr>
-								<tr>
-									<th>
-										<span>*</span>비밀번호
-									</th>	
-									<td>
-										<input type="password" style="width: 360px" placeholder="영문,숫자,특수문자 조합  8~12자리" name="pw" id="pw">
-									</td>
-								</tr>
-								<tr>
-									<th>
-										<span>*</span>비밀번호 확인
-									</th>
-									<td>
-										<input type="password" style="width: 360px" placeholder="영문,숫자,특수문자 조합  8~12자리" name="pwCheck" id="pwCheck">
-									</td>
-								</tr>
-								<tr>
-									<th>
-										<span>*</span>이름
-									</th>
-									<td>
-										<input type="text" style="width: 360px" id="name" name="name">
-									</td>
-								</tr>
-								<tr>
-									<th>
-										<span>*</span>휴대폰번호
-									</th>
-									<td>
-										<select name="hp1" id="" style="width: 85px">
-											<option value="010" selected="selected">010</option>
-											<option value="011">011</option>
-											<option value="016">016</option>
-											<option value="017">017</option>
-											<option value="018">018</option>
-											<option value="019">019</option>
-										</select> 
-										<span class="hypen">-</span> 
-										<input type="tel" class="iText" name="hp2" title="앞번호4자리" maxlength="4" style="width: 85px">
-										<span class="hypen">-</span>
-										<input type="tel" class="iText" name="hp3" title="뒷번호4자리" maxlength="4" style="width: 85px">
-									</td>
-								</tr>
-								<tr>
-									<th>
-										<span>*</span>E-mail
-									</th>
-									<td>
-										<input type="text" style="width: 170px"> @ 
-										<input type="text" id="email2" style="width: 170px" placeholder="선택해주세요"> 
-										<select name="" id="" style="width: 170px">
-											<option value="선택해주세요">선택해주세요</option>
-											<option value="naver.com">naver.com</option>
-											<option value="hanmail.net">hanmail.net</option>
-											<option value="gmail.com">gmail.com</option>
-											<option value="nate.com">nate.com</option>
-											<option value="hotmail.com">hotmail.com</option>
-											<option value="freechal.com">freechal.com</option>
-											<option value="hanmir.com">hanmir.com</option>
-											<option value="korea.com">korea.com</option>
-											<option value="paran.com">paran.com</option>
-											<option value="etc">직접입력</option>
+						<form action="joinForm" id="regForm"  name ="regForm" method="post">
+							<table class="type1">
+								<caption></caption>
+								<colgroup>
+									<col style="width: :170px;">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th><span>*</span>아이디</th>
+										<td><input type="text" style="width: 360px"
+											placeholder="띄어쓰기 없는 영문,숫자로만 6~20자" name="id" id="id">
+											<a href="#a" class="btn_type2" id="idConfirmBtn">중복확인</a></td>
+									</tr>
+									<tr>
+										<th><span>*</span>비밀번호</th>
+										<td><input type="password" style="width: 360px"
+											placeholder="영문,숫자,특수문자 조합  8~12자리" name="pw" id="pw">
+										</td>
+									</tr>
+									<tr>
+										<th><span>*</span>비밀번호 확인</th>
+										<td><input type="password" style="width: 360px"
+											placeholder="영문,숫자,특수문자 조합  8~12자리" name="pwCheck"
+											id="pwCheck"></td>
+									</tr>
+									<tr>
+										<th><span>*</span>이름</th>
+										<td><input type="text" style="width: 360px" id="name"
+											name="name"></td>
+									</tr>
+									<tr>
+										<th><span>*</span>휴대폰번호</th>
+										<td><select name="hp1" id="" style="width: 85px">
+												<option value="010" selected="selected">010</option>
+												<option value="011">011</option>
+												<option value="016">016</option>
+												<option value="017">017</option>
+												<option value="018">018</option>
+												<option value="019">019</option>
+										</select> <span class="hypen">-</span> <input type="tel" class="iText"
+											name="hp2" title="앞번호4자리" maxlength="4" style="width: 85px">
+											<span class="hypen">-</span> <input type="tel" class="iText"
+											name="hp3" title="뒷번호4자리" maxlength="4" style="width: 85px">
+										</td>
+									</tr>
+									<tr>
+										<th><span>*</span>E-mail</th>
+										<td><input type="text" style="width: 170px"> @ <input
+											type="text" id="email2" style="width: 170px"
+											placeholder="선택해주세요"> <select name="" id=""
+											style="width: 170px">
+												<option value="선택해주세요">선택해주세요</option>
+												<option value="naver.com">naver.com</option>
+												<option value="hanmail.net">hanmail.net</option>
+												<option value="gmail.com">gmail.com</option>
+												<option value="nate.com">nate.com</option>
+												<option value="hotmail.com">hotmail.com</option>
+												<option value="freechal.com">freechal.com</option>
+												<option value="hanmir.com">hanmir.com</option>
+												<option value="korea.com">korea.com</option>
+												<option value="paran.com">paran.com</option>
+												<option value="etc">직접입력</option>
 										</select>
-										<div class="icheckbox">
-											<input id="check" name="" value="N" type="checkbox">
-											<label for="check">SMS, 이메일을 통한 상품 및 이벤트 정보 수신에 동의합니다. (선택)</label>
-										</div>
-									</td>
-								</tr>
-																<tr>
-									<th>
-										<span>*</span>주소
-									</th>
-									<td>
-										<div>
-											<input type="text" style="width: 280px"> 
-											<a href="#a" class="btn_type2">주소찾기</a>
-										</div>
-										<div>
-											기본주소 <input type="text" style="width: 360px"><br>
-											상세주소 <input type="text" style="width: 360px">
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<th>
-										<span>*</span>생년월일
-									</th>
-									<td>
-										<select name="" id="year" style="width: 80px">
-											<option value="">선택</option>
-										</select> 년 
-										<select name="" id="month" style="width: 80px">
-											<option value="">선택</option>
-										</select> 월
-										<select name="" id="day" style="width: 80px">
-											<option value="">선택</option>
-										</select> 일 
-										<input type="radio" id="ra1_1">
-										<label for="ra1_1">남</label>
-										<input type="radio" id="ra1_2">
-										<label for="ra1_2">여</label>
-									</td>
-								</tr>
-								<tr>
-									<th>
-										<span>*</span>어린이회원
-									</th>
-									<td>
-										<div class="icheckbox">
-											<input id="check" name="" value="" type="checkbox" /> 
-											<label for="check">14세미만 가입시 보호자 동의 후 가입 가능합니다. 14세 미만 가입시 꼭 체크해 주세요.</label>
-										</div>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-				     </form>
-						
-						
+											<div class="icheckbox">
+												<input id="check" name="" value="N" type="checkbox">
+												<label for="check">SMS, 이메일을 통한 상품 및 이벤트 정보 수신에
+													동의합니다. (선택)</label>
+											</div></td>
+									</tr>
+									<tr>
+										<th><span>*</span>주소</th>
+										<td>
+											<div>
+												<input type="text" style="width: 280px"> <a
+													href="#a" class="btn_type2">주소찾기</a>
+											</div>
+											<div>
+												기본주소 <input type="text" style="width: 360px"><br>
+												상세주소 <input type="text" style="width: 360px">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th><span>*</span>생년월일</th>
+										<td><select name="" id="year" style="width: 80px">
+												<option value="">선택</option>
+										</select> 년 <select name="" id="month" style="width: 80px">
+												<option value="">선택</option>
+										</select> 월 <select name="" id="day" style="width: 80px">
+												<option value="">선택</option>
+										</select> 일 <input type="radio" id="ra1_1"> <label for="ra1_1">남</label>
+											<input type="radio" id="ra1_2"> <label for="ra1_2">여</label>
+										</td>
+									</tr>
+									<tr>
+										<th><span>*</span>어린이회원</th>
+										<td>
+											<div class="icheckbox">
+												<input id="check" name="" value="" type="checkbox" /> <label
+													for="check">14세미만 가입시 보호자 동의 후 가입 가능합니다. 14세 미만 가입시
+													꼭 체크해 주세요.</label>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</form>
+
+
 						<h3 class="h3">약관 동의</h3>
 
 
@@ -559,9 +531,9 @@
 			</div>
 		</div>
 	</section>
-	
-	  <!--Script Section-->
-    <script>
+
+	<!--Script Section-->
+	<script>
         $(document).ready(function(){
             
             for(var i=2019; i>=1930; i--) {
@@ -578,8 +550,8 @@
 
         })
     </script>
-    
-    <script>
+
+	<script>
     $("#idConfirmBtn").click(function(){
     	if($("#id").val()==''|| $("#id").css("border-Color")=='rgb(255,0,0)'){
     		alert("아이디 규칙을 확인하세요.");
@@ -607,28 +579,69 @@
 
     })
     </script>
-    
-    <script>
+
+	<script>
    
     $("#joinBtn").click(function(){    	
     	if(!$("#id").attr("readonly")){
     		alert("아이디 중복체크는 필수 입니다.");
     	}else if($("#pw").val()==''){
     		alert("비밀번호 규칙을 확인하세요");
-    	}else if($("#pwCheck").val() !=$("#pwConfirm").val()){
+    	}else if($("#pw").val() !=$("#pwCheck").val()){
     		alert("비밀번호 값이 서로 다릅니다.")
     	}else if($("#name").val()==''){
     		alert("이름은 필수사항입니다.");
     	}else if(confirm("회원가입을 진행하시겠습니까?")){
-    		$("#regForm").subimt();
+    		$("#regForm").submit();
     	}
     })
 
     </script>
-   
-    
-    
-	
+
+	<script>
+    var id =document.getElementById("id");
+    id.onkeyup =function(){
+        var regex = /^[A-Za-z0-9+]{4,12}$/; 
+        if(regex.test(document.getElementById("id").value )) {
+            document.getElementById("id").style.borderColor = "green";
+          
+        } else {
+            document.getElementById("id").style.borderColor = "red";
+           
+            
+        }
+    }
+    </script>
+	<script>
+    /*비밀번호 형식 검사 스크립트*/
+    var pw = document.getElementById("pw");
+    pw.onkeyup = function(){
+        var regex = /^[A-Za-z0-9+]{8,16}$/;
+         if(regex.test(document.getElementById("pw").value )) {
+            document.getElementById("pw").style.borderColor = "green";
+           
+        } else {
+            document.getElementById("pw").style.borderColor = "red";
+           
+        }
+    }
+    /*비밀번호 확인검사*/
+    var pwConfirm = document.getElementById("pwCheck");
+    pwConfirm.onkeyup = function() {
+        var regex = /^[A-Za-z0-9+]{8,16}$/;
+        if(document.getElementById("pwCheck").value == document.getElementById("pw").value ) {
+            document.getElementById("pwCheck").style.borderColor = "green";
+           
+        } else {
+            document.getElementById("pwCheck").style.borderColor = "red";
+  
+        }
+    }
+    		</script>
+
+
+
+
 	<%@include file="../include/footer.jsp"%>
 </body>
 </html>

@@ -32,13 +32,13 @@
                 <div class="col-xs-12">
                     <div class="loginAll-wrap">
                         <div class="login-wrap">
-                            <form>
+                            <form action="loginForm" id="regForm" name="regForm" method="post">
                                 <div class="login">
-                                    <input type="text" class="login" name="" placeholder="아이디">
-                                    <input type="password" class="password" name="" placeholder="비밀번호">
+                                    <input type="text" class="login" name="id" id="id" placeholder="아이디">
+                                    <input type="password" class="password" name="pw" id="pw" placeholder="비밀번호">
                                 </div>
                                 <div class="loginBtnWrap">
-                                    <button type="button" class="btn btn-defaul loginBtn">로그인</button>
+                                    <button type="button" class="btn btn-defaul loginBtn" id="loginBtn">로그인</button>
                                 </div>
                                 <div class="loginCheck">
                                     <div class="loginCheckleft">
@@ -74,6 +74,23 @@
                 </div>
             </div>
     </section>
+    
+    <script>
+    	$("#loginBtn").click(function(){
+    		
+    		if($("#id").val()==''){
+    			alert("아이디를 입력하세요");
+    		}else if($("#pw").val()==''){
+    			alert("비밀번호를 입력하세요");
+    		}else {
+    			$("#regForm").submit();
+    		}
+    		
+    	})
+    </script>
+    
+    
+    
 <%@include file="../include/footer.jsp" %>
 </body>
 </html>

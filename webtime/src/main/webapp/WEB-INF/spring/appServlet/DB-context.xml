@@ -35,4 +35,5 @@
 	
 
 	<mybatis-spring:scan base-package="com.webtime.*.mapper"/>
+	<mybatis-spring:scan base-package="com.webtime.*.*"/>
 </beans>
