@@ -85,6 +85,7 @@
 </style>
 </head>
 <body>
+<form action="seatData" id="regForm" name="regForm" method="post">
 	<div class="container">
 		<div class="container-fluid">
 			<div class="container-fluid topbox2"></div>
@@ -107,271 +108,63 @@
 								<div>
 									<h5 class="seatpyo">STAGE</h5>
 									<div class="seat-total">
+									
+											<script>
+										      $(document).ready(function() {
+										            // 체크박스들이 변경됬을때
+										            $(":checkbox").change(function() {
+										                var cnt = $("#person").val();
+										                 
+										                // 셀렉트박스의 값과 체크박스중 체크된 갯수가 같을때, 다른 체크박스들을 disable 처리
+										                if( cnt==$(":checkbox:checked").length ) {
+										                    $(":checkbox:not(:checked)").attr("disabled", "disabled");
+										                }
+										                // 체크된 갯수가 다르면 활성화 시킴
+										                else {
+										                    $(":checkbox").removeAttr("disabled");
+										                }
+										            });
+										             
+										            // 셀렉트박스에서 다른 인원수를 선택하면 초기화 시킴
+										            $("#person").change(function(){
+										                $(":checkbox").removeAttr("checked");
+										                $(":checkbox").removeAttr("disabled");
+										            });
+										        });
 
 
-										<table border="1" class="seatNum">
+											</script>
+											<span> 인원 선택</span>  
+											<select id="person">
+												<option value="1">1명</option>
+												<option value="2">2명</option>
+											</select>
+											<span>* (최대 2명)</span>
 
-										</table>
-
-										<table border="3" class="seat-a" border-radius="5">
-											<tr>
-
-												<p></p>
-												<td>0</td>
-												<td>1</td>
-												<td>2</td>
-												<td>3</td>
-												<td>4</td>
-												<td>5</td>
-												<td>6</td>
-												<td>7</td>
-												<td>8</td>
-												<td>9</td>
-												<td>10</td>
-												<td>11</td>
-												<td>12</td>
-												<td>13</td>
-												<td>14</td>
-												<td>15</td>
-												<td>16</td>
-												<td>17</td>
-												<td>18</td>
-												<td>19</td>
-												<td>20</td>
-											</tr>
-
-
-											<tr>
-												<td>A</td>
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-											</tr>
-											<tr>
-												<td>B</td>
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-											</tr>
-											<tr>
-												<td>C</td>
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-											</tr>
-											<tr>
-												<td>D</td>
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-											</tr>
-											<tr>
-												<td>E</td>
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-											</tr>
-
-											<tr>
-												<td>F</td>
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-											</tr>
-											<tr>
-												<td>G</td>
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-											</tr>
-											<tr>
-												<td>H</td>
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-											</tr>
-											<tr>
-												<td>I</td>
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-											</tr>
-											<tr>
-												<td>J</td>
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-												<td width="25"><input type="checkbox" />
-											</tr>
+										<table border="3" class="seat-a" border-radius="5" id="seatTable" name="seatTable">
+	
+												<script>
+												for (var i = 0; i <= 20;i++){
+														if(i === 0 ){
+															document.write("<td width='25'></td>");
+														}else{
+														document.write("<td width='25'>"+i+"</td>");
+														}}
+												for (var i=65;i<=74;i++){
+													
+													document.write("<tr>");
+													document.write("<td>"+String.fromCharCode(i)+"</td>");
+													
+													for(var j=1;j<=20;j++){
+												
+													
+														document.write("<td width='25'><input type='checkbox' id="+String.fromCharCode(i)+j+" name="+String.fromCharCode(i)+j+">");
+														}
+													document.write("</tr>");
+													
+												}
+												</script>
+											
 
 
 
@@ -403,7 +196,6 @@
 											if (btn1.clicked == true) {
 												nextToggle.val();
 											}
-
 										}
 									</script>
 
@@ -423,7 +215,7 @@
 													<td>
 														<div class="form-delivery">
 
-															<input type="radio" id="r1" name="rr" /> <label for="r1"><span></span>신용카드</label>
+															<input type="radio" id="card" name="card" value="card"/> <label for="r1"><span></span>신용카드</label>
 															<p>
 														</div>
 													</td>
@@ -432,22 +224,22 @@
 												<tr>
 													<th scope="row">은행</th>
 													<td>
-														<form>
-															<select name="bank">
-																<option value="none">===선택===</option>
+														
+															<select name="bank" id="bank">
+																<option value="none" id="none">===선택===</option>
 																<option value="nonghyup">농협은행</option>
 																<option value="shinhan">신한은행</option>
 																<option value="kookmin">국민은행</option>
 																<option value="hana">하나은행</option>
 															</select>
 
-														</form>
+														
 
 													</td>
 												</tr>
 												<tr>
 													<th scope="row">카드번호</th>
-													<td><textarea rows="1" cols="20" name="cardnum"
+													<td><textarea rows="1" cols="20" id ="cardNum"name="cardnum"
 															placeholder="카드번호 입력" style="resize: none"></textarea></td>
 												</tr>
 												
@@ -503,7 +295,7 @@
 
 			</div>
 		</div>
-	</div>
+</form>
 
 	<script>
 		$(document).ready(function() {
@@ -514,17 +306,39 @@
 
 	<script>
 		
-		document.getElementById("payBtn").onclick = function() {
-			document.getElementById("paymodal").style.display = "block";
-		}
+	
 		document.getElementById("modalclose").onclick = function() {
 			document.getElementById("paymodal").style.display = "none";
 			document.getElementById("modal_layer").style.display = "none";
 		}
 	</script>
-
+			
 	<script>
+	var bank=document.getElementById("bank");
+	bank.options[bank.selectedIndex].value;
 	
+	var radio=document.getElementById("card");
+	
+	$(document).ready(function(){
+		radio.checked;	
+	
+	})
+	
+	
+	
+	//payBtn	
+	$("#payBtn").click(function(){
+		if(!$("input[type=checkbox]").is(':checked')){
+			alert("좌석을 선택해주세요");
+		}else if((bank.options[bank.selectedIndex].value)=='none'){
+			alert("은행을 선택해주세요");
+		}else if($("#cardNum").val()==''){
+			alert("카드번호를 입력해주세요");
+		}else{
+			document.getElementById("paymodal").style.display = "block";
+			/* $("#regForm").submit(); */
+		}
+	})
 	</script>
 
 
