@@ -311,7 +311,7 @@
 			document.getElementById("paymodal").style.display = "none";
 			document.getElementById("modal_layer").style.display = "none";
 		}
-	</script>
+	</script> 
 			
 	<script>
 	var bank=document.getElementById("bank");
