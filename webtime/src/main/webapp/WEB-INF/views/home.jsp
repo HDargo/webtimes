@@ -137,7 +137,7 @@
                                     </div>
                                     <ul class="rContent">
                                         <li class="rFirst">
-                                            <a href="content/contentDetail"><img src="${pageContext.request.contextPath }/resources/img/rankImg/musical-cre1.jpg"></a>
+                                            <a href="content/contentDetail?num=12"><img src="${pageContext.request.contextPath }/resources/img/rankImg/musical-cre1.jpg"></a>
                                             <a href="##">
                                                 <div class="preTex">웃는남자</div>
                                             </a>

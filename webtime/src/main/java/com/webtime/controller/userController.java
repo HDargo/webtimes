@@ -85,7 +85,7 @@ private UserService userService;
 		return result;
 	}
 	
-	@RequestMapping(value="/loginForm")
+	@RequestMapping(value="/loginForm",method=RequestMethod.POST)
 	public String userLogin(UserVO vo,RedirectAttributes RA,HttpSession session) {
 		
 		int result =userService.login(vo);
@@ -93,7 +93,7 @@ private UserService userService;
 		if(result==1) {
 			session.setAttribute("id", vo.getId());
 
-			return "home";
+			return "redirect:/";
 		}
 		else {
 			RA.addFlashAttribute("msg","아이디 비밀번호를 확인하세요");

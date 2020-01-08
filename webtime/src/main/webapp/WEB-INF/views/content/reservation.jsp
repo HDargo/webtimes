@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix ="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -207,8 +208,17 @@
 													<td><input type="text" id="bno" name="bno" value="${ticketVO.num }" readonly ></td>
 												</tr>
 												<tr>
-													<th>예약자 아이디</th>
+												
+												<c:choose>
+												<c:when test ="${sessionScope.id eq null }"	>						
+													<th>비회원</th>
+													<td><input type="text" id="user_name" name="user_name" value="비회원" readonly></td>
+											</c:when>
+											<c:otherwise>
+											<th>예약자 아이디</th>
 													<td><input type="text" id="user_name" name="user_name" value="${sessionScope.id }"></td>
+											</c:otherwise>
+											</c:choose>
 												</tr>
 												<tr>
 													<th scope="row">작품명</th>
@@ -289,7 +299,9 @@
 
 	<script>
 		document.getElementById("modalclose").onclick = function() {
+			window.close();
 			document.getElementById("paymodal").style.display = "none";
+			
 		
 		}
 	</script>
@@ -344,6 +356,8 @@
 	
 	console.log($(":checkbox:checked").val());
 
+	
+	
 	
 	
 	

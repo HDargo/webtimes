@@ -147,7 +147,7 @@
                      <div class="DT_Rarea">
                         <div class="tk_dt_btn_TArea">
 
-                           <a href="#" class="btn_rev" id="revBtn"><span>예매하기</span></a>
+                           <a href="${pageContext.request.contextPath}/content/reservation?num=${ticketVO.num }" class="btn_rev" id="revBtn"><span>예매하기</span></a>
 
                         </div>
    

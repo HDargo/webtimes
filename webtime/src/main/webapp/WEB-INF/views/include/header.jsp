@@ -41,8 +41,7 @@
                             	<c:when test="${sessionScope.id eq null }">
                                 <li><a href="${pageContext.request.contextPath }/users/login"><span>로그인</span></a></li>
                                 <li><a href="${pageContext.request.contextPath}/users/join_main"><span>회원가입</span></a></li>
-                                <li><a href="${pageContext.request.contextPath }/users/mybooking"><span>예매확인</span></a></li>
-                                <li><a href="${pageContext.request.contextPath }/users/mypage"><span>마이페이지</span></a></li>
+   
                                 <li><a href="${pageContext.request.contextPath }/FAQ/faqList"><span>고객센터</span></a></li>
                                 </c:when>
                                 <c:otherwise>
@@ -59,7 +58,7 @@
                 <div class="header-middle">
                     <div class="main-wrap">
                         <div class="main-logo">
-                        	<a href="/pentabeans">
+                        	<a href="/webtime">
                             	<img src="${pageContext.request.contextPath }/resources/img/headerfooter/inter_logo.PNG">
                             </a>
                         </div>

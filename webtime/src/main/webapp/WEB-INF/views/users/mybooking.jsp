@@ -129,13 +129,11 @@
                          <table class="table table-condensed sport-table">
                             <thead>
                               <tr>
-                                <th>예매일</th>
-                                <th>예약번호</th>
-                                <th>상품명</th>
-                                <th>이용일</th>
-                                <th>매수</th>
-                                <th>취소</th>
-                                <th>현재상태</th>
+                                <th>공연명</th>
+                                <th>좌석번호</th>
+                                <th>결제자명</th>
+                                <th>결제금액</th>
+                                
                               </tr>
                             </thead>
                             <tbody>
@@ -144,54 +142,42 @@
                                 <td><a href="">D24232323</a></td>
                                 <td>호두까기 인형</td>
                                 <td>01/25/2020</td>
-                                <td>2</td>
-                                <td>ㅇㅇ</td>
-                                <td>유효</td>
+                                
                               </tr>
                               <tr>
                                 <td>12/25/2019</td>
                                 <td><a href="">D24232323</a></td>
                                 <td>백조의 호수</td>
                                 <td>01/25/2020</td>
-                                <td>2</td>
-                                <td>ㅇㅇ</td>
-                                <td>유효</td>
-                              </tr>
+                               
+                              </tr> 
                               <tr>
                                 <td>12/25/2020</td>
                                 <td><a href="">D24232323</a></td>
                                 <td>산타클러스</td>
-                                <td>10/10/2020</td>
-                                <td>2</td>
-                                <td>ㅇㅇ</td>
-                                <td>2</td>
+                                <td>10/10/2020</td>s
+                           
                               </tr>
                               <tr>
                                 <td>12/25/2018</td>
                                 <td><a href="">D24232323</a></td>
                                 <td>호두까기 인형</td>
                                 <td>01/25/2020</td>
-                                <td>2</td>
-                                <td>ㅇㅇ</td>
-                                <td>유효</td>
+                            
                               </tr>
                               <tr>
                                 <td>12/25/2019</td>
                                 <td><a href="">D24232323</a></td>
                                 <td>백조의 호수</td>
                                 <td>01/25/2020</td>
-                                <td>2</td>
-                                <td>ㅇㅇ</td>
-                                <td>유효</td>
+                               
                               </tr>
                               <tr>
                                 <td>12/25/2020</td>
                                 <td><a href="">D24232323</a></td>
                                 <td>산타클러스</td>
                                 <td>10/10/2020</td>
-                                <td>2</td>
-                                <td>ㅇㅇ</td>
-                                <td>2</td>
+                              
                               </tr>
                             </tbody>
                           </table>
