@@ -105,25 +105,25 @@
                                     </div>
                                     <ul class="rContent">
                                         <li class="rFirst">
-                                            <a href="##"><img src="${pageContext.request.contextPath }/resources/img/rankImg/musical1.jpg"></a>
-                                            <a href="##">
+                                            <a href="content/contentDetail?num=9"><img src="${pageContext.request.contextPath }/resources/img/rankImg/musical1.jpg"></a>
+                                          
                                                 <div class="preTex">드라큘라</div>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="##"><img src="${pageContext.request.contextPath }/resources/img/rankImg/musical2.jpg"></a>
+                                            <a href="content/contentDetail?num=6"><img src="${pageContext.request.contextPath }/resources/img/rankImg/musical2.jpg"></a>
                                             <a href="##">
                                                 <div class="preTex">아이다</div>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="##"><img src="${pageContext.request.contextPath }/resources/img/rankImg/musical3.jpg"></a>
+                                            <a href="content/contentDetail?num=3"><img src="${pageContext.request.contextPath }/resources/img/rankImg/musical3.jpg"></a>
                                             <a href="##">
                                                 <div class="preTex">스위니토드</div>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="##"><img src="${pageContext.request.contextPath }/resources/img/rankImg/musical4.jpg"></a>
+                                            <a href="content/contentDetail?num=11"><img src="${pageContext.request.contextPath }/resources/img/rankImg/musical4.jpg"></a>
                                             <a href="##">
                                                 <div class="preTex">오페라의유령</div>
                                             </a>
@@ -137,13 +137,13 @@
                                     </div>
                                     <ul class="rContent">
                                         <li class="rFirst">
-                                            <a href="##"><img src="${pageContext.request.contextPath }/resources/img/rankImg/musical-cre1.jpg"></a>
+                                            <a href="content/contentDetail"><img src="${pageContext.request.contextPath }/resources/img/rankImg/musical-cre1.jpg"></a>
                                             <a href="##">
                                                 <div class="preTex">웃는남자</div>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="##"><img src="${pageContext.request.contextPath }/resources/img/rankImg/musical-cre2.jpg"></a>
+                                            <a href="content/contentDetail?num"><img src="${pageContext.request.contextPath }/resources/img/rankImg/musical-cre2.jpg"></a>
                                             <a href="##">
                                                 <div class="preTex">Mr.SHOW</div>
                                             </a>

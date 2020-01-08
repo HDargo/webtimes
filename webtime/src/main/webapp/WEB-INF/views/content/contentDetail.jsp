@@ -57,7 +57,7 @@
                   </h1>
                   <dl class="dt_Name_info">
                      <dd class="etc">
-                        ${ticketVO.type }<span> |</span>${ticketVO.runtime}분 <span>|</span> 24개월이상 관람가능
+                        ${ticketVO.type }<span> |</span>${ticketVO.runtime}분 <span>|</span>
                      </dd>
                   </dl>
                </div>
@@ -147,7 +147,7 @@
                      <div class="DT_Rarea">
                         <div class="tk_dt_btn_TArea">
 
-                           <a href="contentDetail" class="btn_rev" id="revBtn"><span>예매하기</span></a>
+                           <a href="#" class="btn_rev" id="revBtn"><span>예매하기</span></a>
 
                         </div>
    
@@ -333,9 +333,9 @@
 
 
    <script>
-      $('#revBtn').click(function(){
-      
-         window.open('${pageContext.request.contextPath}/content/reservation',"reservation","width=1100,height=1000");
+      $('#revBtn').click(function(event){
+      	 event.preventDefault();
+         window.open('${pageContext.request.contextPath}/content/reservation?num=${ticketVO.num }',"reservation","width=1100,height=1000");
          
       })
       

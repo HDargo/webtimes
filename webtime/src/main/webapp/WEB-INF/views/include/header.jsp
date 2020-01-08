@@ -64,7 +64,7 @@
                             </a>
                         </div>
                         <div class="mobile-logo">
-                            <img src="${pageContext.request.contextPath }/resources/img/headerfooter/m-logo.PNG">
+                            <a href="content/msucial"><img src="${pageContext.request.contextPath }/resources/img/headerfooter/m-logo.PNG"></a>
                         </div>
                         <div class="search-wrap">
                             <form>
@@ -89,21 +89,21 @@
                         <div class="collapse navbar-collapse" id="myNavbar">
                             <ul class="nav navbar-nav">
                                 <li class="dropdown">
-                                    <a class="dropdown-toggle header-btn" data-toggle="dropdown" href="">뮤지컬</a>
+                                    <a class="dropdown-toggle header-btn" data-toggle="dropdown" href="/content/muscial">뮤지컬</a>
                                     <ul class="dropdown-menu menu-drop">
-                                        <li class="theme-btn"><a href="${pageContext.request.contextPath }/content/musical">뮤지컬</a></li>
+                                        <li class="theme-btn"><a href="${pageContext.request.contextPath}/content/musical">뮤지컬</a></li>
                                         <li><a href="#">오리지널/내한공연</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown">
-                                    <a class="dropdown-toggle header-btn" data-toggle="dropdown" href="${pageContext.request.contextPath }/content/concert">콘서트</a>
+                                    <a class="dropdown-toggle header-btn" data-toggle="dropdown" href="/content/concert">콘서트</a>
                                     <ul class="dropdown-menu menu-drop">
                                         <li class="theme-btn"><a href="${pageContext.request.contextPath }/content/concert">콘서트</a></li>
                                         <li class="con-li"><a href="#">발라드</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown">
-                                    <a class="dropdown-toggle header-btn" data-toggle="dropdown" href="#">연극</a>
+                                    <a class="dropdown-toggle header-btn" data-toggle="dropdown" href="">연극</a>
                                     <ul class="dropdown-menu menu-drop">
                                         <li class="theme-btn"><a href="##">연극</a></li>
                                         <li><a href="#">연극</a></li>

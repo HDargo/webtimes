@@ -85,7 +85,7 @@
 </style>
 </head>
 <body>
-	<form action="seatData" id="regForm" name="regForm" method="post">
+	<form action="payData" id="regForm" name="regForm" method="post">
 		<div class="container">
 			<div class="container-fluid">
 				<div class="container-fluid topbox2"></div>
@@ -112,13 +112,14 @@
 
 										<span> 인원 선택</span> <select id="person">
 											<option value="1">1명</option>
-											<option value="2">2명</option>
-										</select> <span>* (최대 2명)</span>
-
+											
+										</select> <span></span>
+							
 										<table border="3" class="seat-a" border-radius="5"
 											id="seatTable" name="seatTable">
 
 											<script>
+											
 												for (var i = 0; i <= 20; i++) {
 													if (i === 0) {
 														document
@@ -142,26 +143,27 @@
 													for (var j = 1; j <= 20; j++) {
 
 														document
-																.write("<td width='25'><input type='checkbox' id="
+																.write("<td width='25'><input type='checkbox' value="
 																		+ String
 																				.fromCharCode(i)
 																		+ j
-																		+ " name="
-																		+ String
-																				.fromCharCode(i)
-																		+ j
+																		+ " name=seat_num"
 																		+ ">");
 													}
 													document.write("</tr>");
 
 												}
+												console.log($("input:checkbox[id="+String.fromCharCode(i)+j+"]:checked").val());
 											</script>
 
-
+												
 
 
 										</table>
-
+										<script>
+										
+										
+										</script>
 
 
 
@@ -196,28 +198,31 @@
 									<div class="left-content4">
 										<div class="innerpay">
 											<table class="myinfo">
-												<tr>
-
-												</tr>
+												
 												<th>
 													<h6>결제 방법 선택</h6>
 												</th>
 												<tr>
+													<th>공연 코드 번호 </th>
+													<td><input type="text" id="bno" name="bno" value="${ticketVO.num }" readonly ></td>
+												</tr>
+												<tr>
+													<th>예약자 아이디</th>
+													<td><input type="text" id="user_name" name="user_name" value="${sessionScope.id }"></td>
+												</tr>
+												<tr>
 													<th scope="row">작품명</th>
 													<td>
-														<div class="form-delivery">
-
+														
 															
-															<span>작품명</span>
-															<p>
-														</div>
+															<input type="text" id="title" name="title" value="${ticketVO.title }"readonly></td>
 													</td>
 
 												</tr>
 												<tr>
 													<th scope="row">은행</th>
 													<td><select name="bank" id="bank">
-															<option value="none" id="none">===선택===</option>
+															<option value="none">===선택===</option>
 															<option value="nonghyup">농협은행</option>
 															<option value="shinhan">신한은행</option>
 															<option value="kookmin">국민은행</option>
@@ -226,23 +231,16 @@
 												</tr>
 												<tr>
 													<th scope="row">카드번호</th>
-													<td><textarea rows="1" cols="20" id="cardNum"
-															name="cardnum" placeholder="카드번호 입력" style="resize: none"></textarea></td>
+													<td><textarea rows="1" cols="20" id="card_num"
+															name="card_num" placeholder="카드번호 입력" style="resize: none"></textarea></td>
 												</tr>
 
-												<tr>
-													<th scope="row">선택좌석</th>
-													<td>정보</td>
-												</tr>
+												
 												<tr>
 													<th scope="row">티켓금액</th>
-													<td>정보</td>
+													<td><input type="text" id="price" name="price" value="${ticketVO.price }"readonly>원</td>
 												</tr>
 
-												<tr>
-													<th scope="row">총 결제금액</th>
-													<td>정보</td>
-												</tr>
 											</table>
 										</div>
 									</div>
@@ -292,7 +290,7 @@
 	<script>
 		document.getElementById("modalclose").onclick = function() {
 			document.getElementById("paymodal").style.display = "none";
-			document.getElementById("modal_layer").style.display = "none";
+		
 		}
 	</script>
 
@@ -300,12 +298,7 @@
 		var bank = document.getElementById("bank");
 		bank.options[bank.selectedIndex].value;
 
-		var radio = document.getElementById("card");
 
-		$(document).ready(function() {
-			radio.checked;
-
-		})
 
 		//payBtn	
 		$("#payBtn").click(function() {
@@ -313,11 +306,11 @@
 				alert("좌석을 선택해주세요");
 			} else if ((bank.options[bank.selectedIndex].value) == 'none') {
 				alert("은행을 선택해주세요");
-			} else if ($("#cardNum").val() == '') {
+			} else if ($("#card_num").val() == '') {
 				alert("카드번호를 입력해주세요");
 			} else {
 				document.getElementById("paymodal").style.display = "block";
-				/* $("#regForm").submit(); */
+				 $("#regForm").submit();
 			}
 		})
 	</script>
@@ -347,6 +340,13 @@
 				$(":checkbox").removeAttr("disabled");
 			});
 		});
+	
+	
+	console.log($(":checkbox:checked").val());
+
+	
+	
+	
 	</script>
 
 
