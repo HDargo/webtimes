@@ -331,14 +331,14 @@
    </section>
 <%@include file="../include/footer.jsp" %>
 
-
-   <script>
+<!-- 
+<!--    <script>
       $('#revBtn').click(function(event){
       	 event.preventDefault();
-         window.open('${pageContext.request.contextPath}/content/reservation?num=${ticketVO.num }',"reservation","width=1100,height=1000");
+         window.open('',"reservation","width=1100,height=1000");
          
       })
-      
-   </script>
+       -->
+   </script> -->
 </body>
 </html>

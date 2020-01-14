@@ -7,17 +7,28 @@
 
 
 	<insert id="pay">
-		insert into t_pay(bno, user_name, title, bank, card_num, seat_num, price) values(bno_seq.nextval ,#{user_name}, #{title}, #{bank}, #{card_num}, #{seat_num}, #{price})
+		insert into t_pay(num, user_name, title, bank,
+		card_num, seat_num, price) values(#{num} ,#{user_name},
+		#{title}, #{bank}, #{card_num}, #{seat_num}, #{price})
 	</insert>
-	
-<!-- 	<select id="getForPay" resultType="com.webtime.command.ContentVO"> -->
-<!-- 		select * from t_user where  id=#{id} -->
-<!-- 	</select> -->
-	
+
+	<!-- <select id="getForPay" resultType="com.webtime.command.ContentVO"> -->
+	<!-- select * from t_user where id=#{id} -->
+	<!-- </select> -->
+
 	<select id="getInfo" resultType="com.webtime.command.TicketVO">
 		select * from ticket where num = #{num}
 	</select>
-	
-<select resultType="com.webtime.command.TicketVO" id="getList">select num, title, place from ticket </select>
 
+	<select resultType="com.webtime.command.TicketVO" id="getList">select num,
+		title, place from ticket </select>
+		
+		
+		
+		<select resultType="com.webtime.command.ContentVO" id="seated">
+		select seat_num from t_pay inner join ticket on t_pay.title =ticket.title where ticket.num=#{num}
+		</select>
+		
+		
+		
 </mapper>

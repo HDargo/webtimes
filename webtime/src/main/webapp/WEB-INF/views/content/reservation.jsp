@@ -96,9 +96,6 @@
 					<p></p>
 
 
-
-
-
 					<!--두번째asd-->
 					<div class="top" id="pay1">
 						<div class="topbox">
@@ -117,9 +114,11 @@
 										</select> <span></span>
 							
 										<table border="3" class="seat-a" border-radius="5"
-											id="seatTable" name="seatTable">
-
-											<script>
+											id="seatTable" name="seatTable">								
+											
+												<script>
+												
+									
 											
 												for (var i = 0; i <= 20; i++) {
 													if (i === 0) {
@@ -156,10 +155,7 @@
 												}
 												console.log($("input:checkbox[id="+String.fromCharCode(i)+j+"]:checked").val());
 											</script>
-
-												
-
-
+ 
 										</table>
 										<script>
 										
@@ -203,9 +199,10 @@
 												<th>
 													<h6>결제 방법 선택</h6>
 												</th>
+												
 												<tr>
 													<th>공연 코드 번호 </th>
-													<td><input type="text" id="bno" name="bno" value="${ticketVO.num }" readonly ></td>
+													<td><input type="text" id="num" name="num" value="${ticketVO.num }" readonly ></td>
 												</tr>
 												<tr>
 												
@@ -215,8 +212,8 @@
 													<td><input type="text" id="user_name" name="user_name" value="비회원" readonly></td>
 											</c:when>
 											<c:otherwise>
-											<th>예약자 아이디</th>
-													<td><input type="text" id="user_name" name="user_name" value="${sessionScope.id }"></td>
+											<th>예약자 이름</th>
+													<td><input type="text" id="user_name" name="user_name" value="${sessionScope.name }"></td>
 											</c:otherwise>
 											</c:choose>
 												</tr>
@@ -318,6 +315,7 @@
 				alert("좌석을 선택해주세요");
 			} else if ((bank.options[bank.selectedIndex].value) == 'none') {
 				alert("은행을 선택해주세요");
+				
 			} else if ($("#card_num").val() == '') {
 				alert("카드번호를 입력해주세요");
 			} else {

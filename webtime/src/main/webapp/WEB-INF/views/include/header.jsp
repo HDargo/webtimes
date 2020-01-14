@@ -88,7 +88,7 @@
                         <div class="collapse navbar-collapse" id="myNavbar">
                             <ul class="nav navbar-nav">
                                 <li class="dropdown">
-                                    <a class="dropdown-toggle header-btn" data-toggle="dropdown" href="/content/muscial">뮤지컬</a>
+                                    <a class="dropdown-toggle header-btn" data-toggle="dropdown" href="${pageContext.request.contextPath}/content/muscial">뮤지컬</a>
                                     <ul class="dropdown-menu menu-drop">
                                         <li class="theme-btn"><a href="${pageContext.request.contextPath}/content/musical">뮤지컬</a></li>
                                         <li><a href="#">오리지널/내한공연</a></li>

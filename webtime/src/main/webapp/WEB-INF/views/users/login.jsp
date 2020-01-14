@@ -91,7 +91,7 @@
     	})
     </script>
     <script>
-    $(document).ready(function(){
+   /*  $(document).ready(function(){
     
     	var key =getCookie("key");
     	$("#id").val(key);//저장된 쿠키값을 가져와서 ID칸에 넣어 준다. 없으면 공백으로 들어감
@@ -113,8 +113,8 @@
 					setCookie("key",$("#id").val(),30);
 				}
 			})    
-   		 })
-    
+   		 }) */
+    /* 
     
    function setCookie(cookieName,value,exdays){
     	var exdate =new Date();
@@ -138,7 +138,7 @@
     	
     }
     
-    
+     */
     
     
     </script>

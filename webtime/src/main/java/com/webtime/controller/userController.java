@@ -88,11 +88,16 @@ private UserService userService;
 	@RequestMapping(value="/loginForm",method=RequestMethod.POST)
 	public String userLogin(UserVO vo,RedirectAttributes RA,HttpSession session) {
 		
-		int result =userService.login(vo);
+		UserVO result =userService.login(vo);
+		System.out.println(result);
 		
-		if(result==1) {
-			session.setAttribute("id", vo.getId());
-
+		if(result!=null) {
+			session.setAttribute("id", result.getId());
+			session.setAttribute("name", result.getName());
+			 System.out.println(result.getId()); 
+			 System.out.println(result.getName());
+			 System.out.println(result.getPw());
+		
 			return "redirect:/";
 		}
 		else {

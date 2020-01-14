@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class ContentVO {
-	public int bno;
+	public int num;
 	public String user_name;
 	public String title;
 	public String bank;

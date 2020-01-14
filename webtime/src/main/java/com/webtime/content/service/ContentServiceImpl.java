@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.webtime.command.ContentVO;
+
 import com.webtime.command.TicketVO;
 import com.webtime.content.mapper.ContentMapper;
 
@@ -31,5 +32,12 @@ public class ContentServiceImpl implements ContentService{
 	@Override
 	public ArrayList<TicketVO> getList() {
 		return contentmapper.getList();
+	}
+	
+	
+	public ArrayList<ContentVO> seated(int num) {
+		return contentmapper.seated(num);
+				
+		
 	}
 }

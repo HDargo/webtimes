@@ -14,8 +14,8 @@
 		insert into t_user(id,pw,name)values(#{id},#{pw},#{name})
 	</insert>
 	
-	<select id="login" resultType="int">
-		select count(*) as result from t_user where id=#{id} and pw=#{pw}
+	<select id="login" resultType="com.webtime.command.UserVO">
+		select * from t_user where id=#{id} and pw=#{pw}
 	</select>
 	
 </mapper>

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.webtime.command.ContentVO;
+
 import com.webtime.command.TicketVO;
 import com.webtime.content.service.ContentService;
 
@@ -65,10 +66,9 @@ public class contentController {
 		public String payData(ContentVO vo, RedirectAttributes RA){
 		System.out.println(vo.toString());
 		contentService.pay(vo);
-		
 		RA.addFlashAttribute("msg","정상 완료 되었습니다.");
 			
-		return "home";
+		return "redirect:/";
 		}
 	
 	
@@ -77,10 +77,18 @@ public class contentController {
 	public String reservation(@RequestParam("num") int num,
 						      Model model) {
 		TicketVO vo = contentService.getInfo(num);
+		
 		model.addAttribute("ticketVO", vo);
+	
 		return "content/reservation";
 	}
 	
+
+	
+	
+	
+	
+
 	/*
 	 * //Content값 보내기
 	 * 

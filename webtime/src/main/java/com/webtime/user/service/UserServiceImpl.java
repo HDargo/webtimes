@@ -27,7 +27,7 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public int login(UserVO vo) {
+	public UserVO login(UserVO vo) {
 		// TODO Auto-generated method stub
 		return usermapper.login(vo);
 	}
